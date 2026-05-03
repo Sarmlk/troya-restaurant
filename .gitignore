@@ -1,0 +1,4 @@
+troya.before-*.html
+*.log
+.DS_Store
+Thumbs.db
