@@ -44,6 +44,17 @@
             background-color: #0f0f11;
             color: #f3f4f6;
         }
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        @supports (overflow: clip) {
+            html,
+            body {
+                overflow-x: clip;
+            }
+        }
         .hero-bg {
             background: #0f0f11;
             overflow: hidden;
@@ -178,6 +189,13 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             background: rgba(255, 255, 255, 0.02);
             transition: all 0.3s ease;
+        }
+        .menu-hit-badge {
+            top: 12px;
+            right: 12px;
+            max-width: calc(100% - 24px);
+            white-space: nowrap;
+            pointer-events: none;
         }
         .menu-card-label:hover {
             border-color: rgba(212, 175, 55, 0.3);
@@ -320,6 +338,7 @@
                 bottom: 14px;
                 min-height: 40px;
                 padding: 0 12px;
+                max-width: calc(100vw - 28px);
             }
         }
     </style>
@@ -507,7 +526,7 @@
 
                                 <!-- Тариф: Классика (ХИТ) -->
                                 <div class="relative">
-                                    <div class="absolute -top-3 -right-2 z-10 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">Хит выбора</div>
+                                    <div class="menu-hit-badge absolute z-10 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">Хит</div>
                                     <input type="radio" name="menu_tier" id="menu-classic" value="3500" data-name="Классика" class="menu-card-radio" checked>
                                     <label for="menu-classic" class="menu-card-label h-full p-5 rounded-xl block relative overflow-hidden">
                                         <div class="absolute top-0 left-0 w-full h-1 bg-gold-500 opacity-50"></div>
