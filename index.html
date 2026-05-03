@@ -190,15 +190,6 @@
             background: rgba(255, 255, 255, 0.02);
             transition: all 0.3s ease;
         }
-        .menu-hit-badge {
-            top: -17px;
-            right: 48px;
-            max-width: calc(100% - 32px);
-            line-height: 1;
-            white-space: nowrap;
-            pointer-events: none;
-            border: 1px solid rgba(15, 15, 17, 0.85);
-        }
         .menu-card-label:hover {
             border-color: rgba(212, 175, 55, 0.3);
             background: rgba(255, 255, 255, 0.04);
@@ -528,13 +519,15 @@
 
                                 <!-- Тариф: Классика (ХИТ) -->
                                 <div class="relative">
-                                    <div class="menu-hit-badge absolute z-10 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">Хит</div>
                                     <input type="radio" name="menu_tier" id="menu-classic" value="3500" data-name="Классика" class="menu-card-radio" checked>
                                     <label for="menu-classic" class="menu-card-label h-full p-5 rounded-xl block relative overflow-hidden">
                                         <div class="absolute top-0 left-0 w-full h-1 bg-gold-500 opacity-50"></div>
-                                        <div class="flex justify-between items-start mb-2">
-                                            <h4 class="font-serif text-lg text-white font-bold">Классика</h4>
-                                            <i class="fa-solid fa-circle-check text-gold-400 text-xl check-icon"></i>
+                                        <div class="flex justify-between items-start gap-3 mb-2">
+                                            <div class="flex min-w-0 items-center gap-2">
+                                                <h4 class="font-serif text-lg text-white font-bold">Классика</h4>
+                                                <span class="inline-flex h-[18px] shrink-0 items-center rounded-full bg-red-600 px-2 text-[9px] font-bold uppercase leading-none tracking-wider text-white shadow-lg">Хит</span>
+                                            </div>
+                                            <i class="fa-solid fa-circle-check text-gold-400 text-xl check-icon shrink-0"></i>
                                         </div>
                                         <div class="text-2xl font-bold text-gold-400 mb-3">3 500 ₽ <span class="text-xs text-gray-500 font-normal">/ чел</span></div>
                                         <ul class="space-y-1.5 text-xs text-gray-400">
